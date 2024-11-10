@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href='https://fonts.googleapis.com/css?family=Cute Font' rel='stylesheet'>
+ <link href="https://fonts.googleapis.com/css2?family=Qwitcher+Grypen:wght@400;700&family=Shadows+Into+Light&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Qwitcher+Grypen:wght@400;700&family=Shadows+Into+Light&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Qwitcher+Grypen:wght@400;700&family=Shadows+Into+Light&display=swap" rel="stylesheet">
+	
+	<style>
+ /* Fonts and Fine Accents */
+ @import url('https://fonts.googleapis.com/css?family=Montserrat:700|Inconsolata|Rock+Salt&display=swap');
+
+ 
+
+ 
+
+ a:hover {
+ color: #f0a500;
+ cursor: url(http://cur.cursors-4u.net/others/oth-6/oth589.cur), pointer !important;
+ letter-spacing: 1.2px;
+ }
+
+ /* Custom Scrollbar */
+ ::-webkit-scrollbar {
+ width: 10px;
+ background-color: rgba(0, 0, 0, 0.2);
+ }
+
+ ::-webkit-scrollbar-thumb {
+ background-color: #f0a500;
+ border-radius: 5px;
+ }
+
+ /* Body Styling with Background */
+ body { 
+ background-color: #9DBDE4;
+			background-size: contain;
+ color: white;
+ cursor: url('http://i.imgur.com/2qleX.jpg'), default;
+ font-family: 'Inconsolata', monospace;
+ }
+
+
+
+
+ /* ooc Text Box */
+ .ooc {
+ color: white;
+ font-size: 14px;
+ text-align: center;
+ background-color: rgba(0, 0, 0, 0.65);
+ border-radius: 8px;
+ padding: 8px;
+ position: fixed;
+ left:640px;
+ bottom: 50px;
+ height: 60px;
+ width: 240px;
+ z-index: 8;
+ overflow-y: auto;
+ box-shadow: 0px 0px 10px black;
+ }
+
+ /* Main Image Styling */
+ .charimg {
+ background-color: transparent;
+ background-image: url('https://i.imgur.com/eGdEvht.png');
+ background-size: contain;
+ background-position: center;
+ background-repeat: no-repeat;
+ position: absolute;
+ bottom: 150px;
+ left:500px;
+ height: 650px;
+ width: 413px;
+ z-index: 1;
+ 
+ }
+		
+		.cuteimg{
+ 
+ 
+ position: absolute;
+ 
+ right: 25%;
+			bottom: 0.2%;
+ width: 50px;
+ z-index: 1;
+ 
+ }
+
+
+ /* Title Styling */
+ .title {
+ position: fixed;
+ bottom: 470px;
+ left: 870px;
+ font-family: "Pacifico", cursive;
+ color: white;
+ font-size: 42px;
+ text-align: center;
+ letter-spacing: 3px;
+ z-index: 2;
+ text-shadow: 2px 2px 6px #000, 0px 0px 10px #203A57;
+ 
+ padding: 6px;
+ transform: rotate(15deg);
+ }
+
+ /* Stats Section */
+ .stats {
+ color: white;
+ font-size: 12px;
+ text-align: left;
+ background-color: rgba(0, 0, 0, 0.25);
+ border-radius: 8px;
+ padding: 10px;
+ position: fixed;
+ left: 640px;
+ bottom: 150px;
+ height: 140px;
+ width: 605px;
+ z-index: 8;
+ overflow-y: auto;
+ box-shadow: 0px 0px 10px white;
+ }
+
+ 
+
+ li {
+
+padding-bottom: 0%;
+display: inline-block;
+
+
+}
+
+ .tooltip .tooltiptext {
+ visibility: hidden;
+ width: 160px;
+ background-color: rgba(0, 0, 0, 0.75);
+ color: #0ed2f7;
+ text-align: center;
+ border-radius: 5px;
+ padding: 5px 10px;
+ position: absolute;
+ z-index: 10;
+ bottom: 120%; 
+ left: 62%;
+ margin-left: -80px;
+ opacity: 0;
+ font-size: 11px;
+ transition: opacity 0.3s;
+ box-shadow: 0px 0px 10px #f0a500;
+ }
+
+ .tooltip:hover .tooltiptext {
+ visibility: visible;
+ opacity: 1;
+ }
+
+ /* Marker Highlight */
+ .marker { 
+ background-color: rgba(157, 189, 228, 0.3);
+ padding: 0 4px;
+ border-radius: 3px;
+ }
+a{
+ color: white;
+}
+ b { 
+ color: white;
+ }
+
+ i { 
+ color: white;
+ }
+
+ h1 {
+ color: #f0a500;
+ font-size: 22px;
+ text-align: center;
+ }
+
+ 
+
+ c {
+ text-shadow: 1px 1px 5px #000, 0px 0px 8px #0ed2f7;
+ }
+		
+#menu {
+position: absolute;
+z-index: 5;
+top: 50.0%;
+width: 100%
+float: left;
+left: 55%;
+margin: 0 0 3em 0;
+padding: 0;
+
+border-radius: 50%;
+display: inline-block;
+seperate: 1%;
+border-collapse: seperate;
+
+}
+
+
+.tab-folder > .tab-content:target ~ .tab-content:last-child, .tab-folder > .tab-content {
+ display: none;
+}
+.tab-folder > :last-child, .tab-folder > .tab-content:target {
+ display: block;
+}
+::-webkit-scrollbar {
+ width: 0px;
+ 
+	}
+	
+	d { 
+	letter-spacing: 2px;
+	font-family: "Pacifico";
+		}
+		
+				
+
+.myButton {
+	
+	border-radius:50%;
+
+	display:inline-block;
+	cursor:pointer;
+	color:#777777;
+	font-family:Arial;
+	font-size:0.938em
+	font-weight:bold;
+	padding:0.4em 0.4em;
+	text-decoration:none;
+	text-shadow:0px 0.063em 0px black;
+}
+.myButton:hover {
+	background:linear-gradient(to bottom, #dfdfdf 5%, #ededed 100%);
+	background-color:#dfdfdf;
+}
+.myButton:active {
+	position:relative;
+	top:0.063em;
+}
+
+ul { list-style: none; display: inline-block;
+}
+
+
+.overlay {
+ position: fixed;
+
+ left: 0;
+
+ width: 100vw;
+background-color: #e6e7e7;
+ height: 100vh;
+ background-image: url('https://i.imgur.com/MLQDI7k.png'); /* Replace with your image URL */
+	background-size: contain;
+
+background-repeat: no-repeat;
+ background-position: center;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ z-index: 10;
+ opacity: 1;
+ visibility: visible;
+ transition: opacity 0.5s ease, visibility 0.5s ease; /
+}
+.overlay-text {
+ font-size: 42px;
+ color: white;
+ font-family: "Pacifico", cursive;
+ text-align: center;
+ letter-spacing: 3px;
+ text-shadow: 2px 2px 6px #000, 0px 0px 10px #203A57;
+ padding: 6px;
+ transform: rotate(15deg);
+ cursor: pointer;
+ transition: color 0.3s ease, transform 0.3s ease;
+ animation: bounce 2s infinite; /* Adds bounce animation */
+}
+
+/* Hover effect */
+.overlay-text:hover {
+ color: #9DBDE4;
+ transform: scale(1.1) rotate(15deg); /* Slightly enlarge and keep the tilt */
+	 text-shadow: 2px 2px 6px white, 0px 0px 10px white;
+	 
+}
+
+/* Bounce animation */
+@keyframes bounce {
+ 0%, 100% { transform: translateY(0) rotate(15deg); }
+ 50% { transform: translateY(-10px) rotate(15deg); } /* Adjust -10px as needed for bounce height */
+}
+		
+
+ /* Hide overlay when it has the 'hidden' class */
+ .overlay.hidden {
+ opacity: 0;
+ pointer-events: none;
+ }
+		
+		#hide:target + .overlay {
+ opacity: 0;
+ visibility: hidden;
+	pointer-events: none;
+}
+/* Fade out the overlay when clicked */
+#overlay-toggle:checked + .overlay {
+ opacity: 0; /* Fades out */
+ visibility: hidden; /* Hides from view */
+ pointer-events: none; /* Disable interaction once hidden */
+}
+ </style>
+</head>
+
+<body>
+<input type="checkbox" id="overlay-toggle" style="display: none;">
+<label for="overlay-toggle" class="overlay">
+ <div class="overlay-text">knock knock!</div>
+</label>
+ <ul id="menu">
+	
+		<li><a href="#tab1" class="myButton"><img src="https://i.imgur.com/2q8fp50.png" width="35px"></a></li>
+		<li><a href="#tab2" class="myButton"><img src="https://i.imgur.com/YRenvTc.png" width="35px"></a></li>
+		<li><a href="#tab4" class="myButton"><img src="https://i.imgur.com/eSCs0tu.png" width="35px"></a></li>
+	
+	</ul>
+<div class="texture"></div>
+<div class="borderbox1"></div>
+<div class="borderbox2"></div>
+<div class="charimg"></div>
+<div class="cuteimg"><img src="https://i.imgur.com/5peqppi.png" width="300px"> </div>
+<div class="title">Good, better, best boi!!</div>
+
+<div class="statbox"></div>
+<div class="stats">
+<div class="ooc">
+ <b> heavy w.i.p; dm friendly; ooc=/=ic; wheaton's law; lt>st; story = story+smut >>> smut; only 18+</b>
+</div>
+
+<div class="stats">
+ 
+
+
+
+	<div id="tab1" class="tab-content"><d><b>General; </d> <br> <b>moniker; Alexey
+ <br><b>nicknames; Give him some!
+	 <br><b>age; 24
+	 <br><b>height; 6'2'' 
+	 <br><b>weight; 200lbs 
+	 <br><b>occupation;</b>; <i><span class="marker" title="Proud guardian of his temple; accomplished martial artist; offers training in hand-to-hand combat; serves as a mentor towards the younglings.">full-time chillings</span></i>
+		 <br><b>orientation; Bisexual
+	
+	
+	 </div>
+ 	<br><br><br><div id="tab2" class="tab-content"><d>Personality;</d> <br> Alexey tends to lights up most rooms he enters with his infectious energy, always ready with a smile or a joke to keep things fun. Teasing his friends comes easily, but he knows when to tone it down, making sure everyone feels comfortable. Patient and easygoing, he’s the go-to guy for a listening ear or some encouragement. He loves hyping others up, gently pushing them to be their best with a mix of support and playful challenge. 
+	Adventure is his thing, and his excitement turns everything into a new adventure. With his <span class="marker" title="He might instinctively go too far and try to dominate you literally if he deems you pretty and fun, and thus may require a firm corrective hand every now and then.">cheeky dominance</span>, he nudges people out of their comfort zones without being overbearing. With a golden heart and a mischievous streak, Alexey is the "best boy" everyone can count on. </d>.</div>
+ <br><br> <b><div id="tab4" class="tab-content"> <d> Stats;<br> </d> His senses are greatly enhanced, especially his sense of smell, hearing, and vision, he can even see decently in the dark. His stamina, 
+ resilience, and endurance are off the charts, and whilst he isn't the strongest, there’s more than enough power in his hands to put your lights out.
+ He certainly isn't a genius, but he’s clever enough when it matters. Fun fact: he’s a natural with tools, with an instinctive knack for anything mechanical.
+
+</body>
+</html>
