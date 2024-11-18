@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <style>
+ /* Шрифты и тонкие акценты */
+ @import url('https://fonts.googleapis.com/css?family=Abril+Fatface|Inconsolata|Satisfy|Teko|Roboto+Condensed|Montserrat|Gloria+Hallelujah|Rock+Salt&display=swap');
+ 
+ /* Фонтови и суптилни акценти */
+@import url('https://fonts.googleapis.com/css?family=Abril+Fatface|Inconsolata|Satisfy|Teko|Roboto+Condensed|Montserrat|Gloria+Hallelujah|Rock+Salt&display=swap');
+
+::selection {
+ background: #FF00FF;
+ color: #000;
+}
+
+::-moz-selection {
+ background: #FF00FF;
+ color: #000;
+}
+
+/* Стилизација линкова са неонским бојама */
+a, a:link, a:visited { 
+ transition: 0.5s;
+ color: #00FFFF;
+}
+
+a:hover {
+ color: #FF00FF;
+ cursor: url(http://cur.cursors-4u.net/others/oth-6/oth589.cur), progress !important; 
+ transition: 0.5s;
+ letter-spacing: 1px;
+}
+
+/* Минимална стилизација трака за скроловање */
+::-webkit-scrollbar {
+ width: 8px;
+ background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+ background-color: #FF00FF;
+ border-radius: 5px;
+}
+
+/* Тело са прилагођеном позадином */
+body { 
+ background: url('https://i.imgur.com/PdHywu4.png') no-repeat center center fixed; 
+ background-size: cover;
+ cursor: url('http://i.imgur.com/2qleX.jpg'), default;
+ overflow: hidden;
+}
+
+/* Неонска текстура као слој */
+.texture { 
+ background-image: url("https://www.transparenttextures.com/patterns/black-orchid.png"); 
+ position: absolute; 
+ opacity: 0.3; 
+ left: 0px; 
+ top: 0px; 
+ height: 100%; 
+ width: 100%; 
+ pointer-events: none;
+ z-index: 1000;
+ box-shadow: 0px 0px 15px #FF00FF;
+}
+
+/* Неонске сјајне границе */
+.borderbox1, .borderbox2, .statbox {
+ background-color: transparent;
+ border: 1px dashed #fff;
+ border-radius: 10px;
+ filter: drop-shadow(0px 0px 15px rgba(255, 0, 255, 0.5));
+ position: absolute;
+ opacity: 0.7;
+}
+
+/* Позиционирање и прилагођавање величине структуре */
+ 
+/* Текстуално поље са тамном позадином и ефектом маркера */
+.text { 
+ color: #00FFFF;
+ font-size: 13px;
+ font-family: 'Inconsolata', monospace;
+ text-align: center;
+ background-color: rgba(0, 0, 0, 0.6); 
+ border-radius: 5px;
+ padding: 5px;
+ position: fixed;
+ left: 360px; 
+ bottom: 20px; /* Подигнуто */
+ height: 115px;
+ width: 310px;
+ z-index: 8;
+ overflow-y: auto;
+ box-shadow: 0px 0px 10px #FF00FF;
+}
+
+/* Главна слика са неонским оквиром */
+.mainimage {
+ background-color: transparent;
+ background-image: url('https://i.imgur.com/FqtQc15.png');
+ background-size: contain;
+ background-position: center;
+ background-repeat: no-repeat;
+ position: absolute;
+ bottom: 160px; /* Благо прилагођено */
+ left: 340px; /* Благо прилагођено */
+ height: 490px; /* Увећана величина */
+ width: 350px; /* Увећана величина */
+ z-index: 1; /* Повећана дебљина границе */
+ border-radius: 10px;
+ border: 4px solid #FF00FF; /* Исправљено */
+ box-shadow: 0px 0px 20px #00FFFF;
+}
+
+/* Наслов */
+.title {
+ position: fixed;
+ bottom: 620px; /* Подигнуто */
+ left: 75px; /* Благо померено */
+ font-family: 'Rock Salt', cursive; 
+ color: blackk;
+ font-size: 40px;
+ text-align: center;
+ text-transform: uppercase;
+ letter-spacing: 2px;
+ z-index: 2;
+ pointer-events: none;
+ text-shadow: 2px 2px 5px #000, 0px 0px 10px #00FFFF;
+ 
+ padding-top: 25px;
+ padding-left: 5px; padding-right: 5px;
+ padding-bottom: 25px;
+ transform: rotate(-10deg);
+}
+
+/* Секција статистике */
+.stats {
+ color: #00FFFF;
+ font-size: 12px;
+ font-family: 'Inconsolata', monospace;
+ text-align: left;
+ background-color: rgba(0, 0, 0, 0.6);
+ border-radius: 5px;
+ padding: 10px;
+ position: fixed;
+ left: 125px; 
+ bottom: 210px; /* Подигнуто */
+ height: 380px;
+ width: 182px;
+ z-index: 8;
+ overflow-y: auto;
+ box-shadow: 0px 0px 10px #FF00FF;
+}
+
+.statbox {
+ left: 125px;
+ bottom: 310px; /* Подигнуто */
+ height: 345px;
+ width: 187px;
+ z-index: 3;
+}
+
+
+@keyframes bounce {
+ 0%, 100% { transform: translateY(0); }
+ 50% { transform: translateY(-10px); }
+}
+
+/* Стилизација искачућих обавештења */
+.tooltip {
+ position: relative;
+ display: inline-block;
+ cursor: pointer;
+}
+
+.tooltip .tooltiptext {
+ visibility: hidden;
+ width: 150px; /* Прилагодите ширину по потреби */
+ background-color: rgba(0, 0, 0, 0.8); /* Тамна позадина */
+ color: #00FFFF; /* Боја текста */
+ text-align: center;
+
+ border-radius: 5px;
+ padding: 5px 10px;
+ position: absolute;
+ z-index: 10;
+ bottom: 100%; /* Позиционирање изнад текста обавештења */
+ left: 50%;
+ margin-left: -100px; /* Центрирање обавештења */
+ opacity: 0;
+ font-size: 10px;
+
+ transition: opacity 0.3s;
+ box-shadow: 0px 0px 10px #FF00FF; /* Неонски сјај */
+}
+
+.tooltip:hover .tooltiptext {
+ visibility: visible;
+ opacity: 1; /* Прикажи обавештење при навођењу */
+}
+
+/* Текстуални акценти (ефекат маркера) */
+.marker { 
+ background-color: rgba(255, 0, 255, 0.3);
+ padding: 0 3px;
+ border-radius: 2px;
+}
+
+
+
+b { 
+ color: #FF00FF;
+}
+
+i { 
+ color: #00FFFF;
+}
+
+h1 {
+ color: #FF00FF;
+ font-size: 20px;
+ text-align: center;
+}
+
+u, t {
+ color: #FF00FF;
+ letter-spacing: 1px;
+}
+c {
+ text-shadow: 2px 2px 5px #000, 0px 0px 10px #FF00FF; letter-spacing 1px; 
+ font-family: 'Rock Salt', cursive; 
+ font-size: 10px;
+ }
+z{
+ text-shadow: 2px 2px 5px #000, 0px 0px 10px #00FFFF; letter-spacing 1px; 
+ font-family: 'Rock Salt', cursive; 
+ font-size: 12px;
+}
+
+</style>
+</head>
+
+<body>
+<div class="texture"></div>
+
+<div class="mainimage"></div>
+ 
+<div class="title">Dmitry Zakharova</div>
+ 
+
+
+
+<div class="stats">
+<div class="text">
+
+ <p><span class ="marker"><b>golden rule, ic=/=ooc;</span><br>lt>st;<br>
+	profile will remain w.i.p. for now; <br> 
+dm friendly enough;<br> flexible character;<br> any questions? just ask;<br> 	I’m pretty chill, just here to have fun, but;<br>
+
+zero tolerance policy for drama;<br>
+	I prefer spontaneous IC approaches and snowballing, but it’s not a must;</b> <br><br><br> 
+
+
+</div>
+
+<div class="stats">
+ <center><h1><z>Stats</z></h1><c> </c><br> </center> 
+ <b>full name</b>; <i>Dmitry Zakharova</i>
+ <br><b>moniker</b>; <i>Dima | Дима </i> 
+ <br><b>age</b>; <i>20</i>
+ <br><b>sex</b>; <i>male</i>
+ <br><b>height</b>; <i>1.97m</i>
+ <br><b>weight</b>; <i>98kg</i>
+ <br><b>occupation</b>; <i><span class="marker tooltip">cage fighter<span class="tooltiptext">By day, he works as a mechanic, and by night, he is forced to fight in underground pits and arenas. </span></i>
+ <br><b>piercings</b>; <i>earlobe</i>
+ <br><b>hobbies</b>; <i><span class="marker tooltip">stargazing<span class="tooltiptext">Fleeting moments of refuge among the stars, where constellations whisper their secrets to him.</span></I>
+	 <br><b>orientation</b>; <i><span class="marker tooltip">bisexual<span class="tooltiptext">leans towards males. submissive-ish top.</span></i>
+
+
+
+
+
+
+ </span></i>
+ <br><br><br><br><br><br><br><br><br><br> scroll for personality and history
+
+ <br><br><br>History </center> <br>Dmitry’s early life was defined by discipline and the relentless rigor of training. Orphaned before he could truly grasp the warmth of home,
+ he found himself under the wing of a man whose heart was as tough as the leather gloves he wore, a coach who valued <span class="marker" title="the kind forged through sheer abuse.">discipline</span> above all else. 
+ Kindness felt like a distant dream, lost amid the grueling training sessions and the sharp cracks of unmet expectations.
+
+ From a tender age, Dmitry was sculpted into a fighter, his days filled with relentless drills that pushed him to his limits.
+ With his formidable stature, he became an imposing figure in the gym. At sixteen years old, Dmitry was pulled from school and thrusted into the cold chaos of underground cage fighting.
+
+ In the dimly lit arenas, <span class = "marker">whispers </span> of his prowess spread quick. They spoke of the quiet giant, swift and agile, who delivered <span class = "marker">captivating</span> knockouts with the precision of a well-oiled machine.
+ As his <span class ="marker">undefeated </span> streak grew, so too did the rumors, drawing the attention of those with less-than-noble intentions in a world where whispers mean trouble.
+
+ <br> <br>Personality <br><br> He is a <span class="marker">gentle</span> giant, a walking contradiction in a world that often values brawn over benevolence. With an imposing figure that commands attention,
+ his true essence is anything but intimidating. At his core, he is a wellspring of <span class="marker">kindness</span>, radiating warmth to those fortunate enough to glimpse the heart beneath the surface. 
+ <span class="marker">Loyalty</span> is his guiding star, and he clings to it fiercely, often to the detriment of his own well-being. His <span class="marker">submission</span> to his coach’s demands has become second nature,
+ making it difficult for him to voice his own <span class="marker" title="Struggles with articulating personal feelings.">desires</span> or feelings.
+
+ Though he possesses the skills of a fierce fighter, his spirit is <span class="marker" title="Soft and delicate.">tender</span> and fragile, much like a flower striving to bloom in a harsh landscape.
+ He longs to please, often going out of his way to ensure those around him are satisfied, even if it means putting his own needs aside. 
+He is <span class="marker">reluctant</span> to self-express, leaving him in a perpetual state of quiet yearning, unable to share the depths of his gentle soul. 
+ Behind the mask of the fighter lies a heart that beats softly, one seeking <span class="marker">connection</span> and understanding</span> </center></h1>
+</div>
+
+</div>
+ 
+
+</body>
+</html>
+
